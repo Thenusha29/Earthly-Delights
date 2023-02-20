@@ -1,0 +1,551 @@
+<!--Header-->
+<app-header></app-header>
+
+<!--Slider starts-->
+<ngb-carousel>
+    <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+            <img src="../assets/pic1.jpg" alt="Angular Carousel 1">
+        </div>
+        <div class="carousel-caption">
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="col-md-4 subtable">
+                    Plant Type
+                </div>
+                &nbsp;&nbsp;&nbsp;
+                <div class="col-md-2 subtable">
+                    Count
+                </div>
+                &nbsp;&nbsp;&nbsp;
+                <div class="col-md-3 subtable">
+                    PromoCode
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+
+                <a class="col-md-2 btn btn-success" href="javascript: void(0)" target="_blank">
+                    Search
+                </a>
+
+            </div>
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+            <img src="../assets/pic2.jpg" alt="Angular Carousel 2">
+        </div>
+        <div class="carousel-caption">
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="col-md-4 subtable">
+                    Plant Type
+                </div>
+                &nbsp;&nbsp;&nbsp;
+                <div class="col-md-2 subtable">
+                    Count
+                </div>
+                &nbsp;&nbsp;&nbsp;
+                <div class="col-md-3 subtable">
+                    PromoCode
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+
+                <a class="col-md-2 btn btn-success" href="javascript: void(0)" target="_blank">
+                    Search
+                </a>
+
+            </div>
+        </div>
+    </ng-template>
+    <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+            <img src="../assets/pic3.jpg" alt="Angular Carousel 1">
+        </div>
+        <div class="carousel-caption">
+            <div class="row">
+                &nbsp;&nbsp;&nbsp;
+                <div class="col-md-4 subtable">
+                    Plant Type
+                </div>
+                &nbsp;&nbsp;&nbsp;
+                <div class="col-md-2 subtable">
+                    Count
+                </div>
+                &nbsp;&nbsp;&nbsp;
+                <div class="col-md-3 subtable">
+                    PromoCode
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+
+                <a class="col-md-2 btn btn-success" href="javascript: void(0)" target="_blank">
+                    Search
+                </a>
+
+            </div>
+        </div>
+    </ng-template>
+</ngb-carousel>
+<!--Slider ends-->
+
+<!--Designations sections-->
+<br><br>
+<h1 class="benefits-text">Our Varieties</h1>
+<br>
+<select class="selection" #sel (change)="changed(sel.value)">
+    <option value="A">Balloon Cactus</option>
+    <option value="B">Blue Barrel Cactus</option>
+    <option value="C">Christmas Tree Cactus</option>
+    <option value="D">Crown Cactus</option>
+    <option value="E"> Fairy Castle Cactus</option>
+    <option value="F"> Lemon Ball Cactus
+    </option>
+</select>
+<br><br><br>
+
+<!--Selection starts-->
+<div>
+    <div class="row"
+        *ngIf="value != 'A' && (value != 'B' && value != 'C' && value != 'D' && value != 'E' && value != 'F')">
+        <img src="../assets/A.jpg" class="center">
+        <div class="text-block">
+            <h2 class="name-1">Balloon Cactus</h2>
+            <h3 class="name-2">Parodia magnifica</h3>
+            <br>
+            <img src="../assets/shadow.png" class="shadow">
+            <p class="center-content">
+                A cactus must be cool if its botanical name contains magnifica! Balloon cactus doesn't disappoint; this
+                globe-shaped plant has parallel rows of spines running down its sides, giving it fun architecture. It
+                also
+                has yellow flowers. It may grow as much as 12 inches tall (30 cm) in time.</p>
+            <a class="btn btn-success more" href="javascript: void(0)" target="_blank">
+                More
+            </a>
+        </div>
+    </div>
+    <div class="row" *ngIf="value == 'A'">
+        <img src="../assets/A.jpg" class="center">
+        <div class="text-block">
+            <h3 class="name-1">Balloon Cactus</h3>
+            <h4 class="name-2">Parodia magnifica</h4>
+            <img src="../assets/shadow.png" class="shadow">
+            <p class="center-content">
+                A cactus must be cool if its botanical name contains magnifica! Balloon cactus doesn't disappoint; this
+                globe-shaped plant has parallel rows of spines running down its sides, giving it fun architecture. It
+                also
+                has yellow flowers. It may grow as much as 12 inches tall (30 cm) in time.</p>
+            <a class="btn btn-success more" href="javascript: void(0)" target="_blank">
+                More
+            </a>
+        </div>
+    </div>
+    <div class="row" *ngIf="value == 'B'">
+        <img src="../assets/B.jpg" class="center">
+        <div class="text-block">
+            <h3 class="name-1"> Blue Barrel Cactus</h3>
+            <h4 class="name-2">Ferocactus glaucescens </h4>
+            <img src="../assets/shadow.png" class="shadow">
+            <p class="center-content">
+                Blue barrel cactus is a silvery-blue cactus decorated with golden-yellow spines. When happy, it produces
+                light yellow flowers in spring or summer. Over time, it can grow 24 inches (60 cm) tall and wide. You
+                may
+                also see it called Echinocactus glaucescens.</p>
+            <a class="btn btn-success more" href="javascript: void(0)" target="_blank">
+                More
+            </a>
+        </div>
+    </div>
+    <div class="row" *ngIf="value == 'C'">
+        <img src="../assets/C.jpg" class="center">
+        <div class="text-block">
+            <h3 class="name-1">Christmas Tree Cactus</h3>
+            <h4 class="name-2">Opuntia subulata monstrose</h4>
+            <img src="../assets/shadow.png" class="shadow">
+            <p class="center-content">
+                Christmas tree cactus is an unusual, upright-growing variety that has thick, branched pads that almost
+                give
+                it a Christmas-tree look. Over time, it can grow 24 inches (60 cm) tall. Note: It's also called
+                Austrocylindropuntia subulata.</p>
+            <a class="btn btn-success more" href="javascript: void(0)" target="_blank">
+                More
+            </a>
+        </div>
+    </div>
+    <div class="row" *ngIf="value == 'D'">
+        <img src="../assets/D.jpg" class="center">
+        <div class="text-block">
+            <h3 class="name-1"> Crown Cactus
+            </h3>
+            <h4 class="name-2">Rebutia marsoneri
+            </h4>
+            <img src="../assets/shadow.png" class="shadow">
+            <p class="center-content">
+                Crown cactus is slow growing and forms tidy mounds about as wide as it is tall (to 6 inches or 15 cm).
+                Over
+                time, it forms offshoots and grows into a cluster. It produces large, orange-red flowers in spring.
+                Note:
+                It's also sometimes called Rebutia krainziana.</p>
+            <a class="btn btn-success more" href="javascript: void(0)" target="_blank">
+                More
+            </a>
+        </div>
+    </div>
+    <div class="row" *ngIf="value == 'E'">
+        <img src="../assets/E.jpg" class="center">
+        <div class="text-block">
+            <h3 class="name-1"> Fairy Castle Cactus
+            </h3>
+            <h4 class="name-2">Acanthocereus tetragonus 'Fairy Castle'
+            </h4>
+            <img src="../assets/shadow.png" class="shadow">
+            <p class="center-content">
+                This small, slow-growing variety has dark green stems studded with white spines. In time, and in ideal
+                growing conditions, it can reach about 36 inches tall.</p>
+            <a class="btn btn-success more" href="javascript: void(0)" target="_blank">
+                More
+            </a>
+        </div>
+    </div>
+    <div class="row" *ngIf="value == 'F'">
+        <img src="../assets/F.jpg" class="center">
+        <div class="text-block">
+            <h3 class="name-1"> Lemon Ball Cactus
+            </h3>
+            <h4 class="name-2">Parodia mammulosa
+            </h4>
+            <img src="../assets/shadow.png" class="shadow">
+            <p class="center-content">
+                Lemon ball cactus (also called Notocactus mammulosa) is a small and easy-to-grow species that usually
+                gets
+                about 4 inches tall and is covered in needle-like spines. When it blooms it produces yellowish flowers.
+            </p>
+            <a class="btn btn-success more" href="javascript: void(0)" target="_blank">
+                More
+            </a>
+        </div>
+    </div>
+</div>
+<!--Selection ends-->
+<br><br><br><br>
+
+<!--Experience Something New section starts-->
+<h1 class="experience-text">Experience Something New</h1>
+<div class="Exp-sec">
+    <div class="row card-row">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <div class="card card-exp m-3">
+                <img class="card-image" src="../assets/en-3.jpg" (click)="openModal1(one)">
+                <div class="card-text">
+                    <p>Planting</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card card-exp m-3">
+                <img class="card-image" src="../assets/en-1.jpg" (click)="openModal2(two)">
+                <div class="card-text">
+                    <p>Grooming</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card card-exp m-3">
+                <img class="card-image" src="../assets/en-6.jpg" (click)="openModal3(three)">
+                <div class="card-text">
+                    <p>Watering</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <br>
+    <div class="row card-row">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <div class="card card-exp m-3">
+                <img class="card-image" src="../assets/en-2.jpg" (click)="openModal4(four)">
+                <div class="card-text">
+                    <p>Maintaining</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card card-exp m-3">
+                <img class="card-image" src="../assets/en-4.jpg" (click)="openModal5(five)">
+                <div class="card-text">
+                    <p>Gifting</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card card-exp m-3">
+                <img class="card-image" src="../assets/en-5.jpg" (click)="openModal6(six)">
+                <div class="card-text">
+                    <p>Environment</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+<!--Experience Something New section ends-->
+<br><br><br><br>
+
+
+<!--Modal for Experience Something New section starts-->
+<ng-template #one>
+    <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">Planting</h6>
+                    <button type="button" class="btn" (click)="modalRef.hide()"
+                        style="border: 1px solid rgb(107, 185, 107);">
+                        X
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="modal-image" src="../assets/en-3.jpg">
+                    <br><br>
+                    <h2 class="modal-in-heading">Planting</h2>
+                    <p class="modal-in-text">With your cacti still in their original pots, experiment with arranging
+                        them in
+                        the container. When
+                        you're happy with your design, make holes for them in the potting mix.
+                    </p>
+                    <br>
+                    <a style="padding-left: 42%;" href="#"><button type="button" class="btn"
+                            style="background-color: #1d5239; color: antiquewhite; padding: 12px; font-size: 18px;">
+                            Start Planting
+                        </button></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #two>
+    <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">Grooming</h6>
+                    <button type="button" class="btn" (click)="modalRef.hide()"
+                        style="border: 1px solid rgb(107, 185, 107);">
+                        X
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="modal-image" src="../assets/en-1.jpg">
+                    <br><br>
+                    <h2 class="modal-in-heading">Grooming</h2>
+                    <p class="modal-in-text">Grooming can consist of pinching, deadheading and general cleanup.
+                        Pinching refers to removing the growing tip of a plant. When plants get too tall and start to
+                        get leggy, removing the top of the plant results in lowering the height as well as causing the
+                        plant to develop a bushier habit.
+                    </p>
+                    <br>
+                    <a style="padding-left: 42%;" href="#"><button type="button" class="btn"
+                            style="background-color: #1d5239; color: antiquewhite; padding: 12px; font-size: 18px;">
+                            Start Grooming
+                        </button></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #three>
+    <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">Watering</h6>
+                    <button type="button" class="btn" (click)="modalRef.hide()"
+                        style="border: 1px solid rgb(107, 185, 107);">
+                        X
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="modal-image" src="../assets/en-6.jpg">
+                    <br><br>
+                    <h2 class="modal-in-heading">Watering</h2>
+                    <p class="modal-in-text">Suitable watering means that the water must sufficiently reach the roots.
+                        Too-low water quantities often only cover the upper soil. Adequate watering also means that crop
+                        plants are particularly dependent upon evenly moist soil in the time until their crops are ripe
+                        for harvesting. Water needs a moment to seep into the soil. Before precious water in the bed
+                        flows away unused, it's better to water repeatedly in parts.
+                    </p>
+                    <br>
+                    <a style="padding-left: 42%;" href="#"><button type="button" class="btn"
+                            style="background-color: #1d5239; color: antiquewhite; padding: 12px; font-size: 18px;">
+                            Start Watering
+                        </button></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #four>
+    <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">Maintaining</h6>
+                    <button type="button" class="btn" (click)="modalRef.hide()"
+                        style="border: 1px solid rgb(107, 185, 107);">
+                        X
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="modal-image" src="../assets/en-2.jpg">
+                    <br><br>
+                    <h2 class="modal-in-heading">Maintaining</h2>
+                    <p class="modal-in-text">Proper garden care can increase the quality and longevity of your plants,
+                        fruits, and veggies. A few hours of full sun is a must for nearly every plant, but different
+                        plant species require different levels of care. If you want your outdoor crops and beautiful
+                        flowers to withstand the seasons, it's important to learn the right way to take care of your
+                        garden.
+                    </p>
+                    <br>
+                    <a style="padding-left: 42%;" href="#"><button type="button" class="btn"
+                            style="background-color: #1d5239; color: antiquewhite; padding: 12px; font-size: 18px;">
+                            Start Maintaining
+                        </button></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #five>
+    <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">Gifting</h6>
+                    <button type="button" class="btn" (click)="modalRef.hide()"
+                        style="border: 1px solid rgb(107, 185, 107);">
+                        X
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="modal-image" src="../assets/en-4.jpg">
+                    <br><br>
+                    <h2 class="modal-in-heading">Gifting</h2>
+                    <p class="modal-in-text">It is best gifted to someone who is going through a bad time, to let them
+                        know that they are strong. Gifting plants can many things, but most of all it means wishing good
+                        luck and telling someone that you care. Gift green friends to your friends to express your
+                        emotions. </p>
+                    <br>
+                    <a style="padding-left: 42%;" href="#"><button type="button" class="btn"
+                            style="background-color: #1d5239; color: antiquewhite; padding: 12px; font-size: 18px;">
+                            Start Gifting
+                        </button></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #six>
+    <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">Environment</h6>
+                    <button type="button" class="btn" (click)="modalRef.hide()"
+                        style="border: 1px solid rgb(107, 185, 107);">
+                        X
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="modal-image" src="../assets/en-5.jpg">
+                    <br><br>
+                    <h2 class="modal-in-heading">Environment</h2>
+                    <p class="modal-in-text">Nothing adds more beauty and comfort to our homes and offices than the lush
+                        flowers and foliage of indoor plants. Bedrooms, bathrooms, kitchens, cubicles... There really
+                        isn't a space a houseplant can't enliven. Just add light and water, and you've got a growing
+                        indoor oasis. Bringing plants into your home is aesthetically pleasing and - amazingly - plants
+                        can offer strong health benefits as well!
+                    </p>
+                    <br>
+                    <a style="padding-left: 35%;" href="#"><button type="button" class="btn"
+                            style="background-color: #1d5239; color: antiquewhite; padding: 12px; font-size: 18px;">
+                            Start Friendly-Environment
+                        </button></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<!--Modal for Experience Something New section ends-->
+
+<!--Offers section starts-->
+<h1 class="experience-text">Offers</h1>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card card-offer m-3">
+            <img class="card-pic" src="../assets/img1.jpg">
+            <div class="card-body">
+                <h6 class="card-title">Plants & Pots</h6>
+                <h4 class="card-title"><b>Combo Plants Offer</b></h4>
+                <p class="card-description">Please note that for home delivery the minimum order value is LKR 3,000.
+                    Orders less than LKR 3,000 can be picked up from our garden centre. Please indicate this during the
+                    checkout process.</p>
+            </div>
+            <h5 class="card-title">From LKR 4000 for this Combo Plants</h5>
+            <br>
+            <div class="button-box"><button class="button button5">View Details</button>
+            </div>
+            <br>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card card-offer m-3">
+            <img class="card-pic" src="../assets/img3.jpg">
+            <div class="card-body">
+                <h6 class="card-title">Plants & Pots</h6>
+                <h4 class="card-title"><b>Potted Cactus with a Sack Cover</b></h4>
+                <p class="card-description">Please note that for home delivery the minimum order value is LKR 3,000.
+                    Orders less than LKR 3,000 can be picked up from our garden centre. Please indicate this during the
+                    checkout process.</p>
+            </div>
+            <h5 class="card-title">From LKR 800 Average Per Plant</h5>
+            <br>
+            <div class="button-box"><button class="button button5">View Details</button>
+            </div>
+            <br>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card card-offer m-3">
+            <img class="card-pic" src="../assets/img5.avif">
+            <div class="card-body">
+                <h6 class="card-title">Plants & Pots</h6>
+                <h4 class="card-title"><b>Cactus Plants in Cute Pots</b></h4>
+                <p class="card-description">Please note that for home delivery the minimum order value is LKR 3,000.
+                    Orders less than LKR 3,000 can be picked up from our garden centre. Please indicate this during the
+                    checkout process.</p>
+            </div>
+            <h5 class="card-title">From LKR 3500 fot this Cute Combo</h5>
+            <br>
+            <div class="button-box"><button class="button button5">View Details</button>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<br><br>
+<!--Offers section ends-->
+
+
+<!--Footer-->
+<app-footer></app-footer>
